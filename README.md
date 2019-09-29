@@ -21,9 +21,9 @@ For example:
 
 key = 4
 
-A-----A-----------<br>
--T---K--T-----N---<br>
---T-C-----D--W----<br>
+A------A-----------<br>
+-T----K--T------N---<br>
+--T--C-----D--W----<br>
 ---A--------A-----<br>
 
 The letters are then concatinated row by row to form the ciphertext. In this example the ciphertext is -> AATKTNTCDWAA
