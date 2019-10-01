@@ -27,3 +27,9 @@ A------A-----------<br>
 ---A--------A-----<br>
 
 The letters are then concatinated row by row to form the ciphertext. In this example the ciphertext is -> AATKTNTCDWAA
+
+# Baconian cipher:
+
+This cipher is essentially another replacement cipher. For all letters in the provided plaintext, each letter is split into a 5-bit binary sequence that represents its place in the alphabet. For example, A == 00000, B == 00010 and so on. Typically in the baconian cipher these digits are then replaced with A or B, in this implimentations case, A == 0 and B == 1.
+
+Therefore for the input ATTACKATDAWN, the ciphertext -> AAAAABAABBBAABBAAAAAAAABAABABAAAAAABAABBAAABBAAAAABABBAABBAB.
