@@ -20,6 +20,36 @@ public class Vigenere {
 		this.ciphertext = this.getChars();
 	}
 	
+	/** Decrypts the plaintext message passed into it. Uses the objects key stored when initialised.
+	 * */
+	public String decrypt(String ciphertext) {
+		
+		String wordBuilder = "";
+		
+		for(int i = 0; i < ciphertext.length(); i++) {
+			
+			char c = ciphertext.charAt(i);
+			int alphabetValue = this.toAlphabetValue(c);
+			
+			int key = this.toAlphabetValue(actualKey.charAt(i));
+				
+			int newAsciiValue = Math.abs(alphabetValue - key) % 26;
+			
+			// System.out.println(c + ":" + alphabetValue + ", " + key + " -> " + newAsciiValue);
+			wordBuilder += Character.toString(newAsciiValue + 65);
+		}
+		
+		return wordBuilder;
+	}
+	
+	/*
+	 * Converts a character to its alphabet position (A = 0).
+	 * */
+	private int toAlphabetValue(char c) {
+		
+		return (int)(c % 32) - 1;
+	}
+	
 	/*
 	 * Iterates through a word, gets each character and shifts it up the alphabet by 3.
 	 * */
